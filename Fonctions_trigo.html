@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigonométrie : fonctions, réciproques et identités</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #111827;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 600;
+    }
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .warning {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      padding: 0.9rem 1rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+    .formula {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Trigonométrie : fonctions, réciproques et identités</h1>
+
+  <p>
+    Ce document récapitule les fonctions trigonométriques circulaires, leurs inverses multiplicatifs,
+    leurs fonctions réciproques, les identités fondamentales et les fonctions hyperboliques associées.
+  </p>
+
+  <div class="warning">
+    <strong>Attention à la notation :</strong>
+    <code>sin⁻¹(x)</code> désigne généralement <code>arcsin(x)</code>, la fonction réciproque du sinus.
+    Ce n’est <strong>pas</strong> <code>1/sin(x)</code>, qui s’écrit <code>csc(x)</code>.
+  </div>
+
+  <h2>Fonctions trigonométriques circulaires</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fonction</th>
+        <th>Notation</th>
+        <th>Définition en sin, cos</th>
+        <th>Inverse multiplicatif</th>
+        <th>Domaine usuel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sinus</td>
+        <td><code>sin θ</code></td>
+        <td><code>y</code> sur le cercle unité</td>
+        <td><code>csc θ = 1/sin θ</code></td>
+        <td><code>ℝ</code></td>
+      </tr>
+      <tr>
+        <td>Cosinus</td>
+        <td><code>cos θ</code></td>
+        <td><code>x</code> sur le cercle unité</td>
+        <td><code>sec θ = 1/cos θ</code></td>
+        <td><code>ℝ</code></td>
+      </tr>
+      <tr>
+        <td>Tangente</td>
+        <td><code>tan θ</code></td>
+        <td><code>sin θ / cos θ</code></td>
+        <td><code>cot θ = 1/tan θ</code></td>
+        <td><code>cos θ ≠ 0</code></td>
+      </tr>
+      <tr>
+        <td>Cotangente</td>
+        <td><code>cot θ</code></td>
+        <td><code>cos θ / sin θ</code></td>
+        <td><code>tan θ = 1/cot θ</code></td>
+        <td><code>sin θ ≠ 0</code></td>
+      </tr>
+      <tr>
+        <td>Sécante</td>
+        <td><code>sec θ</code></td>
+        <td><code>1/cos θ</code></td>
+        <td><code>cos θ = 1/sec θ</code></td>
+        <td><code>cos θ ≠ 0</code></td>
+      </tr>
+      <tr>
+        <td>Cosécante</td>
+        <td><code>csc θ</code></td>
+        <td><code>1/sin θ</code></td>
+        <td><code>sin θ = 1/csc θ</code></td>
+        <td><code>sin θ ≠ 0</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Fonctions réciproques</h2>
+
+  <p>
+    Les fonctions réciproques renvoient un <strong>angle</strong>, contrairement à
+    <code>sec</code>, <code>csc</code> et <code>cot</code>, qui sont des inverses multiplicatifs.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fonction réciproque</th>
+        <th>Notations</th>
+        <th>Définition</th>
+        <th>Domaine</th>
+        <th>Image principale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Arc sinus</td>
+        <td><code>arcsin x</code>, <code>sin⁻¹ x</code></td>
+        <td><code>y = arcsin x ⟺ x = sin y</code></td>
+        <td><code>[-1, 1]</code></td>
+        <td><code>[-π/2, π/2]</code></td>
+      </tr>
+      <tr>
+        <td>Arc cosinus</td>
+        <td><code>arccos x</code>, <code>cos⁻¹ x</code></td>
+        <td><code>y = arccos x ⟺ x = cos y</code></td>
+        <td><code>[-1, 1]</code></td>
+        <td><code>[0, π]</code></td>
+      </tr>
+      <tr>
+        <td>Arc tangente</td>
+        <td><code>arctan x</code>, <code>tan⁻¹ x</code></td>
+        <td><code>y = arctan x ⟺ x = tan y</code></td>
+        <td><code>ℝ</code></td>
+        <td><code>(-π/2, π/2)</code></td>
+      </tr>
+      <tr>
+        <td>Arc cotangente</td>
+        <td><code>arccot x</code>, <code>cot⁻¹ x</code></td>
+        <td><code>y = arccot x ⟺ x = cot y</code></td>
+        <td><code>ℝ</code></td>
+        <td>Dépend de la convention, souvent <code>(0, π)</code></td>
+      </tr>
+      <tr>
+        <td>Arc sécante</td>
+        <td><code>arcsec x</code>, <code>sec⁻¹ x</code></td>
+        <td><code>y = arcsec x ⟺ x = sec y</code></td>
+        <td><code>(-∞, -1] ∪ [1, +∞)</code></td>
+        <td>Dépend de la convention</td>
+      </tr>
+      <tr>
+        <td>Arc cosécante</td>
+        <td><code>arccsc x</code>, <code>csc⁻¹ x</code></td>
+        <td><code>y = arccsc x ⟺ x = csc y</code></td>
+        <td><code>(-∞, -1] ∪ [1, +∞)</code></td>
+        <td>Dépend de la convention</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Identités fondamentales</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Famille</th>
+        <th>Identités</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pythagore</td>
+        <td><code>sin²θ + cos²θ = 1</code></td>
+      </tr>
+      <tr>
+        <td>Pythagore</td>
+        <td><code>1 + tan²θ = sec²θ</code></td>
+      </tr>
+      <tr>
+        <td>Pythagore</td>
+        <td><code>1 + cot²θ = csc²θ</code></td>
+      </tr>
+      <tr>
+        <td>Quotients</td>
+        <td><code>tan θ = sin θ / cos θ</code>, <code>cot θ = cos θ / sin θ</code></td>
+      </tr>
+      <tr>
+        <td>Réciproques</td>
+        <td><code>csc θ = 1/sin θ</code>, <code>sec θ = 1/cos θ</code>, <code>cot θ = 1/tan θ</code></td>
+      </tr>
+      <tr>
+        <td>Parité</td>
+        <td><code>sin(-θ) = -sin θ</code>, <code>cos(-θ) = cos θ</code>, <code>tan(-θ) = -tan θ</code></td>
+      </tr>
+      <tr>
+        <td>Périodicité</td>
+        <td><code>sin(θ + 2π) = sin θ</code>, <code>cos(θ + 2π) = cos θ</code>, <code>tan(θ + π) = tan θ</code></td>
+      </tr>
+      <tr>
+        <td>Addition</td>
+        <td><code>sin(a ± b) = sin a cos b ± cos a sin b</code></td>
+      </tr>
+      <tr>
+        <td>Addition</td>
+        <td><code>cos(a ± b) = cos a cos b ∓ sin a sin b</code></td>
+      </tr>
+      <tr>
+        <td>Addition</td>
+        <td><code>tan(a ± b) = (tan a ± tan b) / (1 ∓ tan a tan b)</code></td>
+      </tr>
+      <tr>
+        <td>Double angle</td>
+        <td><code>sin(2θ) = 2 sin θ cos θ</code>, <code>cos(2θ) = cos²θ - sin²θ</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Exemple : relation entre sec² et 1/cos²</h2>
+
+  <div class="formula">
+    <p>Par définition :</p>
+    <p><code>sec θ = 1 / cos θ</code></p>
+    <p>Donc :</p>
+    <p><code>sec²θ = (1 / cos θ)² = 1 / cos²θ</code></p>
+    <p>Cette égalité est valable uniquement si <code>cos θ ≠ 0</code>.</p>
+  </div>
+
+  <h2>Fonctions hyperboliques</h2>
+
+  <p>
+    Les fonctions hyperboliques sont les analogues des fonctions trigonométriques circulaires,
+    mais définies à partir de l’exponentielle.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fonction</th>
+        <th>Notation</th>
+        <th>Définition</th>
+        <th>Inverse multiplicatif</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sinus hyperbolique</td>
+        <td><code>sinh x</code></td>
+        <td><code>(eˣ - e⁻ˣ) / 2</code></td>
+        <td><code>csch x = 1/sinh x</code></td>
+      </tr>
+      <tr>
+        <td>Cosinus hyperbolique</td>
+        <td><code>cosh x</code></td>
+        <td><code>(eˣ + e⁻ˣ) / 2</code></td>
+        <td><code>sech x = 1/cosh x</code></td>
+      </tr>
+      <tr>
+        <td>Tangente hyperbolique</td>
+        <td><code>tanh x</code></td>
+        <td><code>sinh x / cosh x</code></td>
+        <td><code>coth x = 1/tanh x</code></td>
+      </tr>
+      <tr>
+        <td>Cotangente hyperbolique</td>
+        <td><code>coth x</code></td>
+        <td><code>cosh x / sinh x</code></td>
+        <td><code>tanh x = 1/coth x</code></td>
+      </tr>
+      <tr>
+        <td>Sécante hyperbolique</td>
+        <td><code>sech x</code></td>
+        <td><code>1/cosh x</code></td>
+        <td><code>cosh x = 1/sech x</code></td>
+      </tr>
+      <tr>
+        <td>Cosécante hyperbolique</td>
+        <td><code>csch x</code></td>
+        <td><code>1/sinh x</code></td>
+        <td><code>sinh x = 1/csch x</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Fonctions réciproques hyperboliques</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fonction</th>
+        <th>Notations usuelles</th>
+        <th>Définition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Argument sinus hyperbolique</td>
+        <td><code>arsinh x</code>, <code>asinh x</code>, <code>sinh⁻¹ x</code></td>
+        <td><code>y = arsinh x ⟺ x = sinh y</code></td>
+      </tr>
+      <tr>
+        <td>Argument cosinus hyperbolique</td>
+        <td><code>arcosh x</code>, <code>acosh x</code>, <code>cosh⁻¹ x</code></td>
+        <td><code>y = arcosh x ⟺ x = cosh y</code>, avec <code>x ≥ 1</code></td>
+      </tr>
+      <tr>
+        <td>Argument tangente hyperbolique</td>
+        <td><code>artanh x</code>, <code>atanh x</code>, <code>tanh⁻¹ x</code></td>
+        <td><code>y = artanh x ⟺ x = tanh y</code>, avec <code>-1 &lt; x &lt; 1</code></td>
+      </tr>
+      <tr>
+        <td>Argument cotangente hyperbolique</td>
+        <td><code>arcoth x</code>, <code>acoth x</code>, <code>coth⁻¹ x</code></td>
+        <td><code>y = arcoth x ⟺ x = coth y</code>, avec <code>|x| &gt; 1</code></td>
+      </tr>
+      <tr>
+        <td>Argument sécante hyperbolique</td>
+        <td><code>arsech x</code>, <code>asech x</code>, <code>sech⁻¹ x</code></td>
+        <td><code>y = arsech x ⟺ x = sech y</code>, avec <code>0 &lt; x ≤ 1</code></td>
+      </tr>
+      <tr>
+        <td>Argument cosécante hyperbolique</td>
+        <td><code>arcsch x</code>, <code>acsch x</code>, <code>csch⁻¹ x</code></td>
+        <td><code>y = arcsch x ⟺ x = csch y</code>, avec <code>x ≠ 0</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Pièges fréquents</h2>
+
+  <ul>
+    <li><code>sec θ</code> est l’inverse multiplicatif du cosinus : <code>sec θ = 1/cos θ</code>.</li>
+    <li><code>csc θ</code> est l’inverse multiplicatif du sinus : <code>csc θ = 1/sin θ</code>.</li>
+    <li><code>cot θ</code> est l’inverse multiplicatif de la tangente : <code>cot θ = 1/tan θ</code>.</li>
+    <li><code>arccos x</code> est la réciproque du cosinus restreint à <code>[0, π]</code> : elle renvoie un angle.</li>
+    <li><code>cos⁻¹ x</code> signifie habituellement <code>arccos x</code>, et non <code>1/cos x</code>.</li>
+    <li>Les identités ne sont valables que lorsque les dénominateurs concernés sont non nuls.</li>
+  </ul>
+
+</body>
+</html>
