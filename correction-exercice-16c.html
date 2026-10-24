@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Correction complète — Exercice 16(c)</title>
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--rule:#d1d9e0;--eq:#f6f8fa;--accent:#0969da;box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--rule:#30363d;--eq:#161b22;--accent:#4493f8}}
+html{background:var(--bg)}
+body{margin:0 auto;max-width:760px;padding:1rem 1rem 3rem;padding-top:max(1rem,env(safe-area-inset-top,0px));color:var(--fg);background:var(--bg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1{font-size:1.6rem;line-height:1.25;margin:1rem 0 1.2rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .8rem;padding-bottom:.3rem;border-bottom:1px solid var(--rule)}
+h3{font-size:1.08rem;margin:1.6rem 0 .5rem;color:var(--accent)}
+p,li{margin:.6rem 0}
+.eq{overflow-x:auto;margin:.9rem 0;padding:.4rem .7rem;background:var(--eq);border-radius:6px}
+.eq mjx-container[display="true"]{margin:0!important}
+</style>
+<script>
+window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+</head>
+<body>
+<h1>Correction complète — Exercice 16(c)</h1>
+<p>On considère la sphère de centre $O$ et de rayon $1$. Si $A$ et $B$ sont deux points de cette sphère tels que $\mathbf{a}=\overrightarrow{OA}$ et $\mathbf{b}=\overrightarrow{OB}$ sont perpendiculaires, le cercle de centre $O$ passant par $A$ et $B$ a pour équation vectorielle</p>
+<div class="eq">\[
+\mathbf{v}(\theta)=\cos\theta\,\mathbf{a}+\sin\theta\,\mathbf{b},\qquad 0\le\theta&lt;2\pi .
+\]</div>
+<p>Cette formule est admise par l’énoncé. Elle s’applique à deux vecteurs <strong>unitaires et perpendiculaires</strong> : c’est l’idée directrice des trois questions.</p>
+<h2>(i) Montrer que $\lVert\mathbf{v}(\theta)\rVert^2=1$</h2>
+<p>$A$ et $B$ sont sur la sphère unité, donc $\lVert\mathbf{a}\rVert=\lVert\mathbf{b}\rVert=1$. Comme $\mathbf{a}\perp\mathbf{b}$, on a $\mathbf{a}\cdot\mathbf{b}=0$.</p>
+<p>Le carré de la norme est le produit scalaire du vecteur par lui-même :</p>
+<div class="eq">\[
+\begin{aligned}
+\lVert\mathbf{v}(\theta)\rVert^2
+&amp;=(\cos\theta\,\mathbf{a}+\sin\theta\,\mathbf{b})\cdot{}\\
+&amp;\quad(\cos\theta\,\mathbf{a}+\sin\theta\,\mathbf{b})\\
+&amp;=\cos^2\theta\,(\mathbf{a}\cdot\mathbf{a})\\
+&amp;\quad+2\cos\theta\sin\theta\,(\mathbf{a}\cdot\mathbf{b})\\
+&amp;\quad+\sin^2\theta\,(\mathbf{b}\cdot\mathbf{b})
+\end{aligned}
+\]</div>
+<p>(le produit scalaire est commutatif, d’où le facteur $2$). Avec $\mathbf{a}\cdot\mathbf{a}=\mathbf{b}\cdot\mathbf{b}=1$ et $\mathbf{a}\cdot\mathbf{b}=0$ :</p>
+<div class="eq">\[
+\lVert\mathbf{v}(\theta)\rVert^2=\cos^2\theta+\sin^2\theta=1 .
+\]</div>
+<p>Tous les points du cercle sont donc bien sur la sphère unité. $\blacksquare$</p>
+<h2>(ii) Points d’intersection de $C_1$ et $C_2$</h2>
+<div class="eq">\[
+\begin{aligned}
+C_1:\quad\mathbf{v}_1(\alpha)&amp;=\frac{\cos\alpha}{\sqrt5}\begin{pmatrix}1\\2\\0\end{pmatrix}\\
+&amp;\quad+\sin\alpha\begin{pmatrix}0\\0\\-1\end{pmatrix}
+\end{aligned}
+\]</div>
+<p>avec $0\le\alpha&lt;2\pi$, et</p>
+<div class="eq">\[
+\begin{aligned}
+C_2:\quad\mathbf{v}_2(\beta)&amp;=\frac{\cos\beta}{\sqrt2}\begin{pmatrix}0\\1\\1\end{pmatrix}\\
+&amp;\quad+\sin\beta\begin{pmatrix}1\\0\\0\end{pmatrix}
+\end{aligned}
+\]</div>
+<p>avec $0\le\beta&lt;2\pi$.</p>
+<p><em>Notation.</em> L’énoncé note $\theta$ le paramètre de $C_2$. On le note ici $\beta$ pour distinguer les deux paramètres : un point commun peut correspondre à des valeurs différentes sur chaque cercle.</p>
+<h3>Méthode 1 : égalité des coordonnées</h3>
+<p>Un point est commun aux deux cercles si $\mathbf{v}_1(\alpha)=\mathbf{v}_2(\beta)$, c’est-à-dire :</p>
+<div class="eq">\[
+\begin{aligned}
+(1)\quad&amp;\frac{\cos\alpha}{\sqrt5}=\sin\beta\\[6pt]
+(2)\quad&amp;\frac{2\cos\alpha}{\sqrt5}=\frac{\cos\beta}{\sqrt2}\\[6pt]
+(3)\quad&amp;-\sin\alpha=\frac{\cos\beta}{\sqrt2}
+\end{aligned}
+\]</div>
+<p><strong>Étape 1.</strong> Les seconds membres de (2) et (3) sont égaux, donc</p>
+<div class="eq">\[
+\frac{2\cos\alpha}{\sqrt5}=-\sin\alpha ,
+\]</div>
+<p>soit</p>
+<div class="eq">\[
+\sin\alpha=-\frac{2}{\sqrt5}\cos\alpha .
+\]</div>
+<p><strong>Étape 2.</strong> Avec $\cos^2\alpha+\sin^2\alpha=1$ :</p>
+<div class="eq">\[
+\begin{aligned}
+\cos^2\alpha\left(1+\frac45\right)&amp;=1\\
+\cos^2\alpha&amp;=\frac59\\
+\cos\alpha&amp;=\pm\frac{\sqrt5}{3}
+\end{aligned}
+\]</div>
+<p>La relation de l’étape 1 impose des signes opposés :</p>
+<div class="eq">\[
+\begin{aligned}
+(\cos\alpha,\sin\alpha)&amp;=\left(\frac{\sqrt5}{3},-\frac23\right)\\
+\text{ou}\quad(\cos\alpha,\sin\alpha)&amp;=\left(-\frac{\sqrt5}{3},\frac23\right)
+\end{aligned}
+\]</div>
+<p>(Cela correspond à $\tan\alpha=-\dfrac{2}{\sqrt5}$, négative dans les quadrants 2 et 4.)</p>
+<p><strong>Étape 3.</strong> Points correspondants. Pour $\cos\alpha=\frac{\sqrt5}{3}$ et $\sin\alpha=-\frac23$ :</p>
+<div class="eq">\[
+\begin{aligned}
+\mathbf{v}_1(\alpha)&amp;=\frac13\begin{pmatrix}1\\2\\0\end{pmatrix}\\
+&amp;\quad-\frac23\begin{pmatrix}0\\0\\-1\end{pmatrix}\\
+&amp;=\begin{pmatrix}\frac13\\[2pt]\frac23\\[2pt]\frac23\end{pmatrix}
+\end{aligned}
+\]</div>
+<p>Le couple opposé donne le point opposé $\left(-\frac13,-\frac23,-\frac23\right)$.</p>
+<p><strong>Étape 4.</strong> Ces points sont-ils sur $C_2$ ? Pour le premier, (1) donne $\sin\beta=\frac13$ et (2) donne $\cos\beta=\frac{2\sqrt2}{3}$. Un tel $\beta$ existe car</p>
+<div class="eq">\[
+\begin{aligned}
+\left(\tfrac13\right)^2+\left(\tfrac{2\sqrt2}{3}\right)^2
+&amp;=\tfrac19+\tfrac89\\
+&amp;=1
+\end{aligned}
+\]</div>
+<p>et (3) est vérifiée : $-\sin\alpha=\frac23=\frac{\cos\beta}{\sqrt2}$. La vérification de (1) est indispensable : (2) et (3) seules ne contrôlent pas la première coordonnée. Pour le point opposé, on prend $\sin\beta=-\frac13$ et $\cos\beta=-\frac{2\sqrt2}{3}$.</p>
+<h3>Méthode 2 : lecture géométrique (plus courte)</h3>
+<p>Les vecteurs $\frac1{\sqrt5}(1,2,0)$ et $(0,0,-1)$ sont unitaires et orthogonaux : $C_1$ est le grand cercle de la sphère unité situé dans le plan qu’ils engendrent, d’équation $y=2x$. De même, $C_2$ est le grand cercle situé dans le plan $z=y$.</p>
+<p>Les points communs appartiennent aux deux plans, donc à leur droite d’intersection $(x,y,z)=(t,2t,2t)$. Ils sont aussi sur la sphère :</p>
+<div class="eq">\[
+\begin{aligned}
+t^2+4t^2+4t^2&amp;=1\\
+9t^2&amp;=1\\
+t&amp;=\pm\frac13
+\end{aligned}
+\]</div>
+<p>Réciproquement, tout point de cette droite situé sur la sphère est sur chacun des deux plans et sur la sphère, donc sur $C_1$ et sur $C_2$.</p>
+<h3>Conclusion</h3>
+<p>Les deux points d’intersection sont :</p>
+<div class="eq">\[
+\begin{aligned}
+P_1&amp;=\left(\tfrac13,\tfrac23,\tfrac23\right)\\
+P_2&amp;=\left(-\tfrac13,-\tfrac23,-\tfrac23\right)
+\end{aligned}
+\]</div>
+<p>soit $C_1\cap C_2=\lbrace P_1,P_2\rbrace$.</p>
+<h2>(iii) Cercle de centre $O$ passant par $A$ et $P$</h2>
+<p>Avec $A(0,1,0)$ et $P\left(\frac{\sqrt3}{2},\frac1{\sqrt6},-\frac1{2\sqrt3}\right)$. On pose $\mathbf{a}=\overrightarrow{OA}=(0,1,0)$ et $\mathbf{p}=\overrightarrow{OP}$.</p>
+<h3>1. Pourquoi il faut construire un second vecteur</h3>
+<p>$\mathbf{a}$ est unitaire. $\mathbf{p}$ l’est aussi :</p>
+<div class="eq">\[
+\begin{aligned}
+\lVert\mathbf{p}\rVert^2&amp;=\frac34+\frac16+\frac1{12}\\
+&amp;=\frac{9+2+1}{12}=1
+\end{aligned}
+\]</div>
+<p>Mais $\mathbf{a}\cdot\mathbf{p}=\frac1{\sqrt6}\neq0$ : $\mathbf{a}$ et $\mathbf{p}$ ne sont pas perpendiculaires, on ne peut donc pas les utiliser directement dans la formule. On garde $\mathbf{a}$ et on construit un vecteur unitaire perpendiculaire à $\mathbf{a}$ dans le plan $OAP$.</p>
+<h3>2. Projection de $\overrightarrow{OP}$ sur $\overrightarrow{OA}$</h3>
+<p>Soit $H$ le projeté orthogonal de $P$ sur la droite $(OA)$. Comme $\lVert\mathbf{a}\rVert=1$ :</p>
+<div class="eq">\[
+\begin{aligned}
+\overrightarrow{OH}&amp;=\frac{\mathbf{p}\cdot\mathbf{a}}{\lVert\mathbf{a}\rVert^2}\,\mathbf{a}\\
+&amp;=\frac1{\sqrt6}\,\mathbf{a}\\
+&amp;=\left(0,\frac1{\sqrt6},0\right)
+\end{aligned}
+\]</div>
+<h3>3. Composante perpendiculaire à $\overrightarrow{OA}$</h3>
+<div class="eq">\[
+\begin{aligned}
+\overrightarrow{HP}&amp;=\overrightarrow{OP}-\overrightarrow{OH}\\
+&amp;=\left(\frac{\sqrt3}{2},\,0,\,-\frac1{2\sqrt3}\right)\\
+&amp;=\frac1{2\sqrt3}\,(3,\,0,\,-1)
+\end{aligned}
+\]</div>
+<p>On vérifie $\overrightarrow{HP}\cdot\mathbf{a}=0$ : ce vecteur est perpendiculaire à $\mathbf{a}$ et dirigé dans le plan $OAP$.</p>
+<h3>4. Normalisation</h3>
+<p>$\lVert(3,0,-1)\rVert=\sqrt{10}$, donc</p>
+<div class="eq">\[
+\mathbf{b}=\frac1{\sqrt{10}}\begin{pmatrix}3\\0\\-1\end{pmatrix}.
+\]</div>
+<p>Équivalent : $\mathbf{b}=\overrightarrow{HP}/\lVert\overrightarrow{HP}\rVert$ avec</p>
+<div class="eq">\[
+\lVert\overrightarrow{HP}\rVert=\sqrt{\frac34+\frac1{12}}=\sqrt{\frac56}.
+\]</div>
+<p>On a bien $\lVert\mathbf{a}\rVert=\lVert\mathbf{b}\rVert=1$ et $\mathbf{a}\cdot\mathbf{b}=0$.</p>
+<h3>5. Équation du cercle</h3>
+<p><strong>Réponse.</strong> Pour $0\le\theta&lt;2\pi$ :</p>
+<div class="eq">\[
+\begin{aligned}
+\mathbf{v}(\theta)&amp;=\cos\theta\begin{pmatrix}0\\1\\0\end{pmatrix}\\
+&amp;\quad+\frac{\sin\theta}{\sqrt{10}}\begin{pmatrix}3\\0\\-1\end{pmatrix}
+\end{aligned}
+\]</div>
+<p>Soit, en coordonnées :</p>
+<div class="eq">\[
+\begin{aligned}
+x&amp;=\frac{3}{\sqrt{10}}\sin\theta\\
+y&amp;=\cos\theta\\
+z&amp;=-\frac{1}{\sqrt{10}}\sin\theta
+\end{aligned}
+\]</div>
+<h3>6. Vérification : le cercle passe par $A$ et $P$</h3>
+<ul>
+<li>$\theta=0$ : $\mathbf{v}(0)=(0,1,0)=\overrightarrow{OA}$.</li>
+<li>Pour $P$, on prend $\cos\theta=\frac1{\sqrt6}$ et $\sin\theta=\sqrt{\frac56}$ (possible car $\frac16+\frac56=1$). Alors :</li>
+</ul>
+<div class="eq">\[
+\begin{aligned}
+x&amp;=\frac{3}{\sqrt{10}}\sqrt{\frac56}=\frac{3}{\sqrt{12}}=\frac{\sqrt3}{2}\\[4pt]
+y&amp;=\frac1{\sqrt6}\\[4pt]
+z&amp;=-\frac1{\sqrt{10}}\sqrt{\frac56}=-\frac1{\sqrt{12}}=-\frac1{2\sqrt3}
+\end{aligned}
+\]</div>
+<p>ce qui est bien $\overrightarrow{OP}$.</p>
+<h2>Remarque : non-unicité</h2>
+<p>L’énoncé demande <em>une</em> équation vectorielle, il y en a plusieurs. Le cercle (donc le plan $OAP$) est unique, mais on peut échanger les rôles de $\mathbf{a}$ et $\mathbf{b}$, remplacer $\mathbf{b}$ par $-\mathbf{b}$, ou partir d’un autre couple de vecteurs unitaires orthogonaux du plan $OAP$. Toutes ces écritures décrivent le même cercle ; la forme ci-dessus a l’avantage de faire correspondre $\theta=0$ au point $A$.</p>
+</body>
+</html>
